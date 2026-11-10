@@ -1,0 +1,26 @@
+{
+  "skill": "replace-me",
+  "version": "0.1.0",
+  "cases": [
+    {
+      "id": "positive-001",
+      "input": "Example task that must activate the skill",
+      "expected_activation": true,
+      "must_do": [
+        "Follow the stated workflow"
+      ],
+      "must_not_do": [
+        "Invent missing tools"
+      ]
+    },
+    {
+      "id": "negative-001",
+      "input": "Unrelated task outside skill scope",
+      "expected_activation": false,
+      "must_do": [],
+      "must_not_do": [
+        "Force activation"
+      ]
+    }
+  ]
+}

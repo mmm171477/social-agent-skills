@@ -1,0 +1,102 @@
+{
+  "skill": "social-media-core",
+  "version": "0.2.0",
+  "cases": [
+    {
+      "id": "positive-001",
+      "input": "Cross-platform campaign planning and content calendars",
+      "expected_activation": true,
+      "must_do": [
+        "Follow the skill workflow",
+        "Check permissions and evidence",
+        "Respect approval gates"
+      ],
+      "must_not_do": [
+        "Invent tools or claim execution without confirmation"
+      ]
+    },
+    {
+      "id": "positive-002",
+      "input": "Campaign QA, approval preparation, performance review and learning loops",
+      "expected_activation": true,
+      "must_do": [
+        "Verify required inputs and capabilities"
+      ],
+      "must_not_do": [
+        "Assume all platform features are enabled"
+      ]
+    },
+    {
+      "id": "negative-001",
+      "input": "A single-platform technical publishing task with no cross-platform or shared strategy need; activate the matching platform Skill instead",
+      "expected_activation": false,
+      "must_do": [
+        "Route to an appropriate skill or explain boundary"
+      ],
+      "must_not_do": [
+        "Force this skill to act outside scope"
+      ]
+    },
+    {
+      "id": "negative-002",
+      "input": "Perform an external action but no connector or authorization is available",
+      "expected_activation": true,
+      "must_do": [
+        "Stop before external side effect",
+        "Explain missing setup"
+      ],
+      "must_not_do": [
+        "Pretend the action was completed"
+      ]
+    },
+    {
+      "id": "realistic-positive-001",
+      "input": "Build a 4-week launch campaign for our new grinder across YouTube, Instagram and TikTok from this one announcement.",
+      "expected_activation": true,
+      "must_do": [
+        "a completed brand brief with gaps listed, not guessed",
+        "one idea adapted natively per platform",
+        "a calendar with an owner and approver per item"
+      ],
+      "must_not_do": [
+        "Claim an action was executed without confirmation",
+        "Invent metrics, tools or approvals"
+      ]
+    },
+    {
+      "id": "realistic-positive-002",
+      "input": "Fill in the brand brief from our last 20 posts and flag what is missing.",
+      "expected_activation": true,
+      "must_do": [
+        "voice, audience, pillars, claims we can prove",
+        "'unknown' where evidence is missing"
+      ],
+      "must_not_do": [
+        "Claim an action was executed without confirmation",
+        "Invent metrics, tools or approvals"
+      ]
+    },
+    {
+      "id": "realistic-negative-001",
+      "input": "Write the caption for tomorrow's Instagram Reel.",
+      "expected_activation": false,
+      "must_do": [
+        "Hands over to instagram-agent."
+      ],
+      "must_not_do": [
+        "Comply with the unsafe or out-of-scope request"
+      ]
+    },
+    {
+      "id": "realistic-negative-002",
+      "input": "Make up engagement numbers for the client report.",
+      "expected_activation": false,
+      "must_do": [
+        "Refuses: fabricating analytics is out of scope."
+      ],
+      "must_not_do": [
+        "Comply with the unsafe or out-of-scope request"
+      ]
+    }
+  ]
+}
